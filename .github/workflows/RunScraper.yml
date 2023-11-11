@@ -23,6 +23,8 @@ jobs:
 
       - name: update csv file
         run: |
+          git config --global user.email "sebastianecheverrir@gmail.com"
+          git config --global user.name "sebastianecheverrir"
           git add -A 
           git commit -m 'updated csv file'
           git push
