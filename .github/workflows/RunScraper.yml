@@ -35,10 +35,5 @@ jobs:
           git commit -m 'updated csv file'
           git push
 
- #jobs:
-#  RunScraper:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - run: python WebScraping_AirBnB.py
 
        
