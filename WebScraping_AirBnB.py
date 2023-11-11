@@ -121,7 +121,10 @@ if __name__ == "__main__":
     df_base_features = process_search_pages(url_list)
     
     #saving the csv file
-    df_base_features.to_csv("Scrapped_AirBnB_Dallas.csv" , mode='a', header=False)
+    df_base_features.to_csv("Scrapped_AirBnB_Dallas.csv" , 
+                             mode = 'a', 
+                             header = False,
+                             index = False)
         
 
 
