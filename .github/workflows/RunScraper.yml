@@ -19,12 +19,16 @@ jobs:
           pip install -r requirements.txt
 
       - name: execute py script # run main.py
-        run: ls
-        run: pwd
-        run: python WebScraping_AirBnB.py
+        run: |
+          ls
+          pwd
+          python WebScraping_AirBnB.py
+          ls
+          pwd
 
       - name: update csv file
         run: |
+          pwd
           git config --global user.email "sebastianecheverrir@gmail.com"
           git config --global user.name "sebastianecheverrir"
           git add -A 
