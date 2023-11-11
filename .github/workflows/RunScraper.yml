@@ -23,7 +23,7 @@ jobs:
 
       - name: update csv file
         run: |
-          git add Scrapped_AirBnB_Dallas.csv
+          git add ./Scrapped_AirBnB_Dallas.csv
           git commit -m 'updated csv file'
           git push
 
