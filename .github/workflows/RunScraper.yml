@@ -1,0 +1,9 @@
+name: RunScraper
+run-name: Scrape
+on: [push]
+jobs:
+  RunScraper:
+    runs-on: ubuntu-latest
+    steps:
+      - run: python WebScraping_AirBnB.py
+
