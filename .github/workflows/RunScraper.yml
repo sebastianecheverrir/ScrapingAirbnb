@@ -2,7 +2,7 @@ name: RunScraper
 run-name: Scrape
 on: [push]
 jobs:
-  build:
+  ScrapeAirBnB:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo content
@@ -23,7 +23,7 @@ jobs:
 
       - name: update csv file
         run: |
-          git add ./Scrapped_AirBnB_Dallas.csv
+          git add -A 
           git commit -m 'updated csv file'
           git push
 
