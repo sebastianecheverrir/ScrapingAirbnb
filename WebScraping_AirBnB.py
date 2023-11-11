@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
+# In[1]:
 
 
 #Adapted from https://github.com/x-technology/airbnb-analytics
 
 
-# In[1]:
+# In[2]:
 
 
 # all imports
@@ -26,14 +26,14 @@ import pandas as pd
 # import os
 
 
-# In[2]:
+# In[3]:
 
 
 check_in_date = datetime.date.today() + datetime.timedelta(days=7)
 check_out_date = check_in_date + datetime.timedelta(days=2)
 
 
-# In[3]:
+# In[4]:
 
 
 # define the url to be scrapped
@@ -49,7 +49,7 @@ airbnb_url = 'https://www.airbnb.com/s/Medellin/homes?homes&date_picker_type=cal
              str(check_out_date)
 
 
-# In[4]:
+# In[5]:
 
 
 # too many separate extractions
@@ -90,7 +90,7 @@ def extract_element(listing_html, params):
     return output
 
 
-# In[5]:
+# In[6]:
 
 
 # 1. build all urls
@@ -106,7 +106,7 @@ def build_urls(main_url, listings_per_page=18, pages_per_location=2):
     return url_list
 
 
-# In[6]:
+# In[7]:
 
 
 # safe function to extract all features from one page containg multiple listings
@@ -121,7 +121,7 @@ def extract_page_features(soup, rules):
     return features_dict
 
 
-# In[7]:
+# In[8]:
 
 
 # 2. Iteratively scrape pages
@@ -138,16 +138,18 @@ def process_search_pages(url_list):
     return df_features
 
 
-# In[8]:
+# In[9]:
 
 
 # build a list of URLs
 url_list = build_urls(airbnb_url)
 
 
-# In[9]:
+# In[10]:
 
 
 #run the scrapping process
 df_base_features = process_search_pages(url_list)
+
+df_base_features.to_csv("Scrapped_AirBnB_Dallas.csv" , mode='a', header=False)
 
