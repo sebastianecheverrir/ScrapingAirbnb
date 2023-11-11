@@ -20,6 +20,13 @@ jobs:
 
       - name: execute py script # run main.py
         run: python WebScraping_AirBnB.py
+
+      - name: update csv file
+        run: |
+          git add Scrapped_AirBnB_Dallas.csv
+          git commit -m 'updated csv file'
+          git push
+
  #jobs:
 #  RunScraper:
 #    runs-on: ubuntu-latest
