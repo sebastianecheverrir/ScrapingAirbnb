@@ -54,7 +54,7 @@ for airbnb_url in list_of_properties:
     # print(soup)
     
     #getting the price
-    if  soup.find_all("span", {"class": "_tyxjp1"})):
+    if  soup.find_all("span", {"class": "_tyxjp1"}):
         price = soup.find_all("span", {"class": "_tyxjp1"})[0].text #From NL
     else:
         price  = "0"
