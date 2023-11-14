@@ -48,7 +48,7 @@ for airbnb_url in list_of_properties:
     page_source = driver.page_source
     
     #Parsing the HTML text using Beatiful Soup
-    soup = BeautifulSoup(page_source, "lxml")
+    soup = BeautifulSoup(page_source, "html.parser")
     
     #getting the price
     price = soup.find_all("span", {"class": "_tyxjp1"})[0].text
