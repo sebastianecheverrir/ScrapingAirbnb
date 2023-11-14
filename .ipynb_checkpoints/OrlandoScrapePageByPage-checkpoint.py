@@ -54,8 +54,10 @@ for airbnb_url in list_of_properties:
     # print(soup)
     
     #getting the price
-    print(soup.find_all("span", {"class": "_tyxjp1"}))
-    price = soup.find_all("span", {"class": "_tyxjp1"})[0].text #From NL
+    if  soup.find_all("span", {"class": "_tyxjp1"})):
+        price = soup.find_all("span", {"class": "_tyxjp1"})[0].text #From NL
+    else:
+        price  = "0"
     # price = soup.find_all("span", {"class": "_1y74zjx"})[0].text #From Github
     #Getting the header
     header1 = soup.find_all("h1", {"class": "hpipapi i1pmzyw7 dir dir-ltr"})[0].text
