@@ -45,15 +45,16 @@ for airbnb_url in list_of_properties:
     print(airbnb_url)
     #navigating to the site with selenium and getting the page source
     driver.get(airbnb_url)
-    time.sleep(5)
+    time.sleep(10)
     page_source = driver.page_source
     
     #Parsing the HTML text using Beatiful Soup
     soup = BeautifulSoup(page_source, "html.parser")
 
-    print(soup)
+    # print(soup)
     
     #getting the price
+    print(soup.find_all("span", {"class": "_tyxjp1"}))
     price = soup.find_all("span", {"class": "_tyxjp1"})[0].text #From NL
     # price = soup.find_all("span", {"class": "_1y74zjx"})[0].text #From Github
     #Getting the header
