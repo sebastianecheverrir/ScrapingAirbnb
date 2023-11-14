@@ -42,6 +42,7 @@ list_of_properties = [
 
 list_property_dicts = []
 for airbnb_url in list_of_properties:
+    print(airbnb_url)
     #navigating to the site with selenium and getting the page source
     driver.get(airbnb_url)
     time.sleep(5)
