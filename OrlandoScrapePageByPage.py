@@ -51,7 +51,7 @@ for airbnb_url in list_of_properties:
     #Parsing the HTML text using Beatiful Soup
     soup = BeautifulSoup(page_source, "html.parser")
 
-    # print(soup)
+    print(soup)
     
     #getting the price
     # price = soup.find_all("span", {"class": "_tyxjp1"})[0].text #From NL
