@@ -51,10 +51,10 @@ for airbnb_url in list_of_properties:
     #Parsing the HTML text using Beatiful Soup
     soup = BeautifulSoup(page_source, "html.parser")
 
-    print(soup)
+    # print(soup)
     
     #getting the price
-    price = soup.find_all("span", {"class": "_tyxjp1"})[0].text
+    # price = soup.find_all("span", {"class": "_tyxjp1"})[0].text
     #Getting the header
     header1 = soup.find_all("h1", {"class": "hpipapi i1pmzyw7 dir dir-ltr"})[0].text
     header2 = soup.find_all("h1", {"class": "hpipapi dir dir-ltr"})[0].text
@@ -68,7 +68,7 @@ for airbnb_url in list_of_properties:
                             "header1" : header1,
                             "header2" : header2, 
                             "url"     : airbnb_url,
-                            "price"   : price,
+                            # "price"   : price,
                             "guests"  : guests,
                             "bedrooms": bedrooms,
                             "beds"    : beds,
