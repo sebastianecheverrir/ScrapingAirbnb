@@ -27,24 +27,28 @@ options.add_argument('--no-sandbox')
 driver = webdriver.Chrome(options=options)
 
 #defining the websites to visit
+#https://www.airbnb.com/rooms/53783060?check_out=2024-01-04&check_in=2023-12-31
 list_of_properties = [
-                        'https://abnb.me/8wHtBhNFFEb', 
-                        'https://abnb.me/LbBwDYHFFEb',
-                        'https://abnb.me/iLqLwQIFFEb',
-                        'https://abnb.me/hiP24qJFFEb',
-                        'https://abnb.me/oXCjyjKFFEb',
-                        'https://abnb.me/DGw410KFFEb',
-                        'https://abnb.me/1ihvcBLFFEb',
-                        'https://abnb.me/nasW55LFFEb',
-                        'https://abnb.me/ULjtTCMFFEb',
-                        'https://abnb.me/8wHtBhNFFEb',
+                        'https://www.airbnb.com/rooms/53783060',
+                        'https://www.airbnb.com/rooms/555296618368262573',
+                        'https://www.airbnb.com/rooms/52715414',
+                        'https://www.airbnb.com/rooms/573879761085146337',
+                        'https://www.airbnb.com/rooms/50955338',
+                        'https://www.airbnb.com/rooms/53784975',
+                        'https://www.airbnb.com/rooms/50287188',
+                        'https://www.airbnb.com/rooms/972551791576367216',
+                        'https://www.airbnb.com/rooms/52715413',
                      ]
+
 
 list_property_dicts = []
 for airbnb_url in list_of_properties:
     print(airbnb_url)
+    check_in = date.today() timedelta(days = 30)
+    check_out = check_in + timedelta(days = 3)
+    stay_dates = 
     #navigating to the site with selenium and getting the page source
-    driver.get(airbnb_url)
+    driver.get(airbnb_url + f"?check_out={check_out}&check_in={check_in}")
     time.sleep(10)
     page_source = driver.page_source
     
