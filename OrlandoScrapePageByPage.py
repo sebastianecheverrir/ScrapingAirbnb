@@ -11,7 +11,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import pandas as pd
 import os.path
-from datetime import date
+from datetime import date, timedelta
 
 #sudo apt install google-chrome-stable
 
@@ -44,7 +44,7 @@ list_of_properties = [
 list_property_dicts = []
 for airbnb_url in list_of_properties:
     print(airbnb_url)
-    check_in = date.today() timedelta(days = 30)
+    check_in = date.today() +  timedelta(days = 30)
     check_out = check_in + timedelta(days = 3)
     stay_dates = 
     #navigating to the site with selenium and getting the page source
