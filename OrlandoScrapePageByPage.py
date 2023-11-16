@@ -73,15 +73,17 @@ for airbnb_url in list_of_properties:
     baths = soup.find_all("li", {"class": "l7n4lsf dir dir-ltr"})[3].text
 
     dict_property_details = {
-                            "date"    : date.today(),
-                            "header1" : header1,
-                            "header2" : header2, 
-                            "url"     : airbnb_url,
-                            "price"   : price,
-                            "guests"  : guests,
-                            "bedrooms": bedrooms,
-                            "beds"    : beds,
-                            "baths"   : baths
+                            "date"     : date.today(),
+                            "check-in" : check_in,
+                            "check-out": check_out,
+                            "header1"  : header1,
+                            "header2"  : header2, 
+                            "url"      : airbnb_url,
+                            "price"    : price,
+                            "guests"   : guests,
+                            "bedrooms" : bedrooms,
+                            "beds"     : beds,
+                            "baths"    : baths
                             }
 
     list_property_dicts.append(dict_property_details)
