@@ -11,11 +11,11 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import pandas as pd
 import os.path
-from datetime import date, timedelta
+from datetime import date, timedelta, datetime
 
 #sudo apt install google-chrome-stable
 
-
+print(datetime.today())
 
 # In[2]:
 
