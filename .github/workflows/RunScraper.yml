@@ -3,7 +3,7 @@ run-name: Scrape
   #on: [push]
 on: 
   schedule:
-    - cron: '35 17 * * 4'
+    - cron: '40 17 * * *'
 jobs:
   ScrapeAirBnB:
     runs-on: ubuntu-latest
