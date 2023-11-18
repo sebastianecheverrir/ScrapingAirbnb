@@ -1,9 +1,9 @@
 name: RunScraper
 run-name: Scrape
-on: [push]
-  #on: 
-  #schedule:
-  #  - cron: '07 07 * * 5'
+  #on: [push]
+on: 
+schedule:
+  - cron: '07 07 * * 5'
 jobs:
   ScrapeAirBnB:
     runs-on: ubuntu-latest

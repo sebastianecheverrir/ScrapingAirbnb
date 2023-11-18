@@ -52,7 +52,7 @@ for airbnb_url in list_of_properties:
 
     #navigating to the site with selenium and getting the page source
     driver.get(airbnb_url + f"?check_out={check_out}&check_in={check_in}")
-    time.sleep(20)
+    time.sleep(10)
     page_source = driver.page_source
     
     #Parsing the HTML text using Beatiful Soup
