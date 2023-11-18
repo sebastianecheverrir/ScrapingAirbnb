@@ -64,15 +64,38 @@ for airbnb_url in list_of_properties:
     if  soup.find_all("span", {"class": "_tyxjp1"}):
         price = soup.find_all("span", {"class": "_tyxjp1"})[0].text #From NL
     else:
-        price  = "0"
+        price  = ""
     # price = soup.find_all("span", {"class": "_1y74zjx"})[0].text #From Github
     #Getting the header
-    header1 = soup.find_all("h1", {"class": "hpipapi i1pmzyw7 dir dir-ltr"})[0].text
-    header2 = soup.find_all("h1", {"class": "hpipapi dir dir-ltr"})[0].text
-    guests = soup.find_all("li", {"class": "l7n4lsf dir dir-ltr"})[0].text
-    bedrooms = soup.find_all("li", {"class": "l7n4lsf dir dir-ltr"})[1].text
-    beds = soup.find_all("li", {"class": "l7n4lsf dir dir-ltr"})[2].text
-    baths = soup.find_all("li", {"class": "l7n4lsf dir dir-ltr"})[3].text
+    if soup.find_all("h1", {"class": "hpipapi i1pmzyw7 dir dir-ltr"}):
+        header1 = soup.find_all("h1", {"class": "hpipapi i1pmzyw7 dir dir-ltr"})[0].text
+    else:
+        header1 = ""
+
+    if soup.find_all("h1", {"class": "hpipapi dir dir-ltr"}):
+        header2 = soup.find_all("h1", {"class": "hpipapi dir dir-ltr"})[0].text
+    else:
+        header2 = ""
+
+    if soup.find_all("li", {"class": "l7n4lsf dir dir-ltr"}):
+        guests = soup.find_all("li", {"class": "l7n4lsf dir dir-ltr"})[0].text
+    else:
+        guests = ""
+
+    if soup.find_all("li", {"class": "l7n4lsf dir dir-ltr"}):
+        bedrooms = soup.find_all("li", {"class": "l7n4lsf dir dir-ltr"})[1].text
+    else:
+        bedrooms = ""
+
+    if soup.find_all("li", {"class": "l7n4lsf dir dir-ltr"}):
+        beds = soup.find_all("li", {"class": "l7n4lsf dir dir-ltr"})[2].text
+    else:
+        beds = ""
+
+    if soup.find_all("li", {"class": "l7n4lsf dir dir-ltr"}):
+        baths = soup.find_all("li", {"class": "l7n4lsf dir dir-ltr"})[3].text
+    else:
+        baths = ""
 
     dict_property_details = {
                             "date"     : date.today(),
