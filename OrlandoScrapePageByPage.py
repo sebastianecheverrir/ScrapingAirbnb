@@ -42,11 +42,14 @@ list_of_properties = [
 
 list_property_dicts = []
 for airbnb_url in list_of_properties:
-    print(airbnb_url)
+#    print(airbnb_url)
 
     check_in = date.today() +  timedelta(days = 30)
     check_out = check_in + timedelta(days = 3)
-    
+
+    print(airbnb_url + f"?check_out={check_out}&check_in={check_in}")
+
+
     #navigating to the site with selenium and getting the page source
     driver.get(airbnb_url + f"?check_out={check_out}&check_in={check_in}")
     time.sleep(10)
