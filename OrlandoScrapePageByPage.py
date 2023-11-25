@@ -37,7 +37,11 @@ list_of_properties = [
                         'https://www.airbnb.com/rooms/50287188',
                         'https://www.airbnb.com/rooms/972551791576367216',
                         'https://www.airbnb.com/rooms/52715413',
-                     ]
+                        'https://www.airbnb.com/rooms/813144546737768657',
+                        'https://www.airbnb.com/rooms/52204247',
+                        'https://www.airbnb.com/rooms/28495929',
+                        'https://www.airbnb.com/rooms/887635284203805688',
+                        ]
 
 
 list_property_dicts = []
