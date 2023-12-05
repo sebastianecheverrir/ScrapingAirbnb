@@ -71,13 +71,13 @@ for airbnb_url in list_of_properties:
         price  = ""
     # price = soup.find_all("span", {"class": "_1y74zjx"})[0].text #From Github
     #Getting the header
-    if soup.find_all("h1", {"class": "hpipapi i1pmzyw7 dir dir-ltr"}):
-        header1 = soup.find_all("h1", {"class": "hpipapi i1pmzyw7 dir dir-ltr"})[0].text
+    if soup.find_all("h1", {"class": "hpipapi atm_7l_1kw7nm4 atm_c8_1x4eueo atm_cs_1kw7nm4 atm_g3_1kw7nm4 atm_gi_idpfg4 atm_l8_idpfg4 atm_kd_idpfg4_pfnrn2 i1pmzyw7 atm_9s_1nu9bjl dir dir-ltr"}):
+        header1 = soup.find_all("h1", {"class": "hpipapi atm_7l_1kw7nm4 atm_c8_1x4eueo atm_cs_1kw7nm4 atm_g3_1kw7nm4 atm_gi_idpfg4 atm_l8_idpfg4 atm_kd_idpfg4_pfnrn2 i1pmzyw7 atm_9s_1nu9bjl dir dir-ltr"})[0].text
     else:
         header1 = ""
 
-    if soup.find_all("h1", {"class": "hpipapi dir dir-ltr"}):
-        header2 = soup.find_all("h1", {"class": "hpipapi dir dir-ltr"})[0].text
+    if soup.find_all("h1", {"class": "hpipapi atm_7l_1kw7nm4 atm_c8_1x4eueo atm_cs_1kw7nm4 atm_g3_1kw7nm4 atm_gi_idpfg4 atm_l8_idpfg4 atm_kd_idpfg4_pfnrn2 dir dir-ltr"}):
+        header2 = soup.find_all("h1", {"class": "hpipapi atm_7l_1kw7nm4 atm_c8_1x4eueo atm_cs_1kw7nm4 atm_g3_1kw7nm4 atm_gi_idpfg4 atm_l8_idpfg4 atm_kd_idpfg4_pfnrn2 dir dir-ltr"})[0].text
     else:
         header2 = ""
 
