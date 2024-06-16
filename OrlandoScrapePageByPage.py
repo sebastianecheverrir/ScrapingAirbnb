@@ -66,11 +66,16 @@ for airbnb_url in list_of_properties:
     # print(soup)
     
     #getting the price
-    if  soup.find_all("span", {"class": "_tyxjp1"}):
-        price = soup.find_all("span", {"class": "_tyxjp1"})[0].text #From NL
+#    if  soup.find_all("span", {"class": "_tyxjp1"}):
+#        price = soup.find_all("span", {"class": "_tyxjp1"})[0].text #From NL
+#    else:
+#        price  = ""
+#    # price = soup.find_all("span", {"class": "_1y74zjx"})[0].text #From Github
+    if  soup.find_all("span", {"class": "_t6t62s"}):
+        price = soup.find_all("span", {"class": "_t6t62s"})[0].text #From NL
     else:
         price  = ""
-    # price = soup.find_all("span", {"class": "_1y74zjx"})[0].text #From Github
+    
     #Getting the header
     if soup.find_all("h1", {"class": "hpipapi atm_7l_1kw7nm4 atm_c8_1x4eueo atm_cs_1kw7nm4 atm_g3_1kw7nm4 atm_gi_idpfg4 atm_l8_idpfg4 atm_kd_idpfg4_pfnrn2 i1pmzyw7 atm_9s_1nu9bjl dir dir-ltr"}):
         header1 = soup.find_all("h1", {"class": "hpipapi atm_7l_1kw7nm4 atm_c8_1x4eueo atm_cs_1kw7nm4 atm_g3_1kw7nm4 atm_gi_idpfg4 atm_l8_idpfg4 atm_kd_idpfg4_pfnrn2 i1pmzyw7 atm_9s_1nu9bjl dir dir-ltr"})[0].text
@@ -115,7 +120,7 @@ for airbnb_url in list_of_properties:
                             "beds"     : beds,
                             "baths"    : baths
                             }
-
+    print(dict_property_details)
     list_property_dicts.append(dict_property_details)
 
 
