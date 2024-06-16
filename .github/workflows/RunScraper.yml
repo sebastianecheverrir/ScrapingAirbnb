@@ -4,6 +4,7 @@ on:
   schedule:
     #    - cron: '*/10 * * * *' 
     - cron: '7 7 * * *' 
+  workflow_dispatch:
 jobs:
   ScrapeAirBnB:
     runs-on: ubuntu-latest
